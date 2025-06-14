@@ -16,19 +16,14 @@ A database modeling project was developed for a fictional car rental company cal
 
 <h2> Tecnologias Utilizadas / Technologies Used 💻 </h2>
 
-O projeto foi desenvolvido utilizando as seguintes ferramentas e tecnologias:
+* BrModelo: Utilizado para a modelagem do MER (Modelo Entidade-Relacionamento) [pt_br]
+* BrModelo: Used to model the ER (Entity-Relationship) diagram [en] 
+* [MySQL](https://dev.mysql.com/doc/): Utilizado como sistema gerenciador de banco de dados (SGBD) [pt_br]
+* [MySQL](https://dev.mysql.com/doc/): Used as the database management system (DBMS) [en]   
+* [DBeaver](https://dbeaver.io/docs/): Utilizado para a criação do banco de dados e execução dos comandos SQL [pt_br]
+* [DBeaver](https://dbeaver.io/docs/): Used for database creation and SQL query execution [en] 
 
-<strong><a href="https://github.com/alignash/brModelo-2.0" target="_blank">BrModelo</a></strong>: utilizado para a modelagem do MER (Modelo Entidade-Relacionamento);
 
-<strong><a href="https://dev.mysql.com/doc/" target="_blank">MySQL</a></strong>: utilizado como sistema gerenciador de banco de dados (SGBD);
 
-<strong><a href="https://dbeaver.io/docs/" target="_blank">DBeaver</a></strong>: utilizado para a criação do banco de dados e execução dos comandos SQL.
 
-<br>
-The project was developed using the following tools and technologies:
 
-<strong><a href="https://github.com/alignash/brModelo-2.0" target="_blank">BrModelo</a></strong>: used to create the ER (Entity-Relationship) model;
-
-<strong><a href="https://dev.mysql.com/doc/" target="_blank">MySQL</a></strong>: used as the database management system (DBMS);
-
-<strong><a href="https://dbeaver.io/docs/" target="_blank">DBeaver</a></strong>: used for database creation and SQL query execution.
