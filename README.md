@@ -34,3 +34,31 @@ A database modeling project was developed for a fictional car rental company cal
 <p>Além disso, você precisará de uma ferramenta capaz de interpretar e executar comandos SQL, como o DBeaver ou o MySQL Workbench. <strong>[pt_br]</strong></p>
 <p>Additionally, you’ll need a tool capable of interpreting and executing SQL commands, such as DBeaver or MySQL Workbench. <strong>[en]</strong></p>
 
+<h2> Como rodar a aplicação GoRent / How to run the GoRent application ✅</h2>
+
+### Pré-Requisitos / Prerequisites
+
+* Verifique se você possui o MySQL instalado na sua máquina, assim como uma ferramenta para interpretar comandos SQL, como DBeaver ou MySQL Workbench. <strong>[pt_br]</strong>  
+* Make sure you have MySQL installed on your machine, along with a tool to interpret SQL commands, such as DBeaver or MySQL Workbench. <strong>[en]</strong>  
+
+<ol>
+    <li><strong>Clone o Repositório / Clone the repository</strong>
+        <p>Clone o repositório do GitHub para a sua máquina local usando o comando abaixo. <strong>[pt_br]</strong></p>
+        <p>Clone the GitHub repository to your local machine using the command below. <strong>[en]</strong></p>
+        <pre><code>git clone https://github.com/bpdc/GoRent.git
+</code></pre>
+    </li>
+    
+  <li><strong>Acesse os Arquivos / Access the Files</strong>
+        <p>Abra o arquivo <code>.txt</code> que contém os comandos SQL, copie o conteúdo e cole em uma ferramenta como DBeaver, MySQL Workbench ou qualquer outro interpretador SQL de sua preferência. <strong>[pt_br]</strong></p>
+        <p>Open the <code>.txt</code> file containing the SQL commands, copy the content, and paste it into a tool like DBeaver, MySQL Workbench, or any other SQL interpreter of your choice. <strong>[en]</strong></p>
+    </li>
+
+  <li><strong>Execute os Comandos / Run the Commands</strong>
+      <p>Execute os comandos no ambiente escolhido para criar o banco de dados e as tabelas. <strong>[pt_br]</strong></p>
+      <p>Run the commands in your chosen environment to create the database and tables. <strong>[en]</strong></p>
+    </li>
+</ol>
+
+
+
