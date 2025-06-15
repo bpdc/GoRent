@@ -23,7 +23,14 @@ A database modeling project was developed for a fictional car rental company cal
 * [DBeaver](https://dbeaver.io/docs/): Utilizado para a criação do banco de dados e execução dos comandos SQL [pt_br]
 * [DBeaver](https://dbeaver.io/docs/): Used for database creation and SQL query execution [en] 
 
+<h2> Versões Necessárias / Required Versions 🔢 </h2>
 
+<p>Para que esta aplicação funcione corretamente em sua máquina, é necessário que você tenha as seguintes versões instaladas. <strong> [pt_br] </strong> <br></p>
+<p>To ensure this application works correctly on your machine, you need to have the following versions installed. <strong> [en] </strong></p>
 
+* MySQL - Versão: 8.0 ou superior <strong>[pt_br]</strong>
+* MySQL - Version: 8.0 or higher <strong>[en]</strong>
 
+<p>Além disso, você precisará de uma ferramenta capaz de interpretar e executar comandos SQL, como o DBeaver ou o MySQL Workbench. <strong>[pt_br]</strong></p>
+<p>Additionally, you’ll need a tool capable of interpreting and executing SQL commands, such as DBeaver or MySQL Workbench. <strong>[en]</strong></p>
 
