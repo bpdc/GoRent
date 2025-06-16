@@ -1,0 +1,242 @@
+
+--Criação da tabela Locadora--
+CREATE TABLE Locadora(
+	CNPJ_Locad VARCHAR(100) NOT NULL,
+	Nome_locad VARCHAR(100),
+	Tel_Locad VARCHAR(100),
+	PRIMARY KEY(CNPJ_Locad)
+);
+
+--Criação da tabela Funcionário--
+CREATE TABLE Funcionario(
+	ID_Func INT NOT NULL,
+	CNPJ_Locad VARCHAR(100),
+	Nome_Func VARCHAR(100),
+	Tel_Func VARCHAR(100),
+	PRIMARY KEY(ID_Func),
+	FOREIGN KEY(CNPJ_Locad) REFERENCES Locadora(CNPJ_Locad)
+);
+
+--Criação da tabela Carro--
+CREATE TABLE Carro(
+	Placa_Car VARCHAR(100),
+	CNPJ_Locad VARCHAR(100),
+	Marca_Car VARCHAR(100),
+	Modelo_Car VARCHAR(100),
+	Preco_Diaria INT,
+	Disponibilidade_Car VARCHAR(100),
+	Categoria_Car VARCHAR(100),
+	PRIMARY KEY(Placa_Car),
+	FOREIGN KEY(CNPJ_Locad) REFERENCES Locadora(CNPJ_Locad)
+);
+
+--Criação da tabela Cliente--
+CREATE TABLE Cliente(
+	CPF_Cli VARCHAR(100) NOT NULL,
+	ID_Func INT,
+	Nome_Cli VARCHAR(100),
+	DataNasci_Cli DATE,
+	NumCNH_Cli VARCHAR(100),
+	Tel_Cli VARCHAR(100),
+	PRIMARY KEY(CPF_Cli),
+	FOREIGN KEY(ID_Func) REFERENCES Funcionario(ID_Func)
+);
+
+--Criação da tabela Cli_Aluguel--
+CREATE TABLE Cli_Aluguel(
+	CPF_Cli VARCHAR(100) NOT NULL,
+	Placa_Car VARCHAR(100),
+	Periodo_Aluguel VARCHAR(100),
+	FOREIGN KEY(CPF_Cli) REFERENCES Cliente(CPF_Cli),
+	FOREIGN KEY(Placa_Car) REFERENCES Carro(Placa_Car)
+);
+
+--Inserção dos dados da tabela Locadora--
+INSERT INTO Locadora (CNPJ_Locad, Nome_Locad, Tel_Locad)
+VALUES ('22667654000125', 'Localiza', '(11) 222244441');
+
+INSERT INTO Locadora (CNPJ_Locad, Nome_Locad, Tel_Locad)
+VALUES ('77333632000156', 'Movida', '(11) 123456789');
+
+INSERT INTO Locadora (CNPJ_Locad, Nome_Locad, Tel_Locad)
+VALUES ('68412852000156', 'Unidas', '(11) 221233450');
+
+INSERT INTO Locadora (CNPJ_Locad, Nome_Locad, Tel_Locad)
+VALUES ('45336654001561', 'Foco', '(11) 213458960');
+
+INSERT INTO Locadora (CNPJ_Locad, Nome_Locad, Tel_Locad)
+VALUES ('56587789600154', 'Avis', '(11) 400289227');
+
+INSERT INTO Locadora (CNPJ_Locad, Nome_Locad, Tel_Locad)
+VALUES ('45655654000125', 'Hertz', '(11) 122789015');
+
+INSERT INTO Locadora (CNPJ_Locad, Nome_Locad, Tel_Locad)
+VALUES ('44555987000127', 'Europcar', '(11) 566776540');
+
+INSERT INTO Locadora (CNPJ_Locad, Nome_Locad, Tel_Locad)
+VALUES ('56236321000156', 'Alamo', '(11) 400376232');
+
+INSERT INTO Locadora (CNPJ_Locad, Nome_Locad, Tel_Locad)
+VALUES ('56236328000156', 'Sixt', '(11) 478834667');
+
+INSERT INTO Locadora (CNPJ_Locad, Nome_Locad, Tel_Locad)
+VALUES ('13555654000154', 'Budget', '(11) 244587990');
+
+
+--Inserção dos dados da tabela Funcionario--
+INSERT INTO Funcionario (ID_Func, CNPJ_Locad, Nome_Func, Tel_Func)
+VALUES (1, '22667654000125', 'João Silva', '(11) 913197825');
+
+INSERT INTO Funcionario (ID_Func, CNPJ_Locad, Nome_Func, Tel_Func)
+VALUES (2, '77333632000156', 'Marta Silva', '(21) 915197633');
+
+INSERT INTO Funcionario (ID_Func, CNPJ_Locad, Nome_Func, Tel_Func)
+VALUES (3, '68412852000156', 'Pedro Raul', '(21) 999990001');
+
+INSERT INTO Funcionario (ID_Func, CNPJ_Locad, Nome_Func, Tel_Func)
+VALUES (4, '45336654001561', 'Cassio', '(11) 959035025');
+
+INSERT INTO Funcionario (ID_Func, CNPJ_Locad, Nome_Func, Tel_Func)
+VALUES (5, '56587789600154', 'Fagner Assis', '(11) 959035925');
+
+INSERT INTO Funcionario (ID_Func, CNPJ_Locad, Nome_Func, Tel_Func)
+VALUES (6, '45655654000125', 'Roger Cruz', '(61) 916174545');
+
+INSERT INTO Funcionario (ID_Func, CNPJ_Locad, Nome_Func, Tel_Func)
+VALUES (7, '44555987000127', 'Yuri Miguel', '(71) 918251416');
+
+INSERT INTO Funcionario (ID_Func, CNPJ_Locad, Nome_Func, Tel_Func)
+VALUES (8, '56236321000156', 'Carlos Sales', '(11) 901193743');
+
+INSERT INTO Funcionario (ID_Func, CNPJ_Locad, Nome_Func, Tel_Func)
+VALUES (9, '56236328000156', 'Ryan Andre', '(11) 021465377');
+
+INSERT INTO Funcionario (ID_Func, CNPJ_Locad, Nome_Func, Tel_Func)
+VALUES (10, '13555654000154', 'Lucas Silva', '(11) 913196532');
+
+
+--Inserção dos dados da tabela Carro--
+INSERT INTO Carro (Placa_Car, CNPJ_Locad, Marca_Car, Modelo_Car, Preco_Diaria, Disponibilidade_Car, Categoria_Car)
+VALUES ('ABC1D23', '22667654000125', 'Fiat', 'Toro', 120.00, 'Disponível', 'SUV');
+
+INSERT INTO Carro (Placa_Car, CNPJ_Locad, Marca_Car, Modelo_Car, Preco_Diaria, Disponibilidade_Car, Categoria_Car)
+VALUES ('DEF4G56', '77333632000156', 'BMW', 'X1', 150.00, 'Indisponível', 'SUV');
+
+INSERT INTO Carro (Placa_Car, CNPJ_Locad, Marca_Car, Modelo_Car, Preco_Diaria, Disponibilidade_Car, Categoria_Car)
+VALUES ('GH17H89', '68412852000156', 'Audi', 'A3', 90.00, 'Disponível', 'SEDAN');
+
+INSERT INTO Carro (Placa_Car, CNPJ_Locad, Marca_Car, Modelo_Car, Preco_Diaria, Disponibilidade_Car, Categoria_Car)
+VALUES ('MNO3P45', '45336654001561', 'Hyundai', 'Creta', 81.00, 'Indisponível', 'SUV');
+
+INSERT INTO Carro (Placa_Car, CNPJ_Locad, Marca_Car, Modelo_Car, Preco_Diaria, Disponibilidade_Car, Categoria_Car)
+VALUES ('PQR6S78', '56587789600154', 'Jeep', 'Renegade', 85.00, 'Disponível', 'SUV');
+
+INSERT INTO Carro (Placa_Car, CNPJ_Locad, Marca_Car, Modelo_Car, Preco_Diaria, Disponibilidade_Car, Categoria_Car)
+VALUES ('VWX2Y34', '45655654000125', 'Chevrolet', 'Onix', 75.00, 'Disponível', 'HATCH');
+
+INSERT INTO Carro (Placa_Car, CNPJ_Locad, Marca_Car, Modelo_Car, Preco_Diaria, Disponibilidade_Car, Categoria_Car)
+VALUES ('YZA5B67', '44555987000127', 'Volvo', 'Xc-60', 100.00, 'Indisponível', 'SUV');
+
+INSERT INTO Carro (Placa_Car, CNPJ_Locad, Marca_Car, Modelo_Car, Preco_Diaria, Disponibilidade_Car, Categoria_Car)
+VALUES ('BCDBE90', '56236321000156', 'Fiat', 'Uno', 60.00, 'Disponível', 'HATCH');
+
+INSERT INTO Carro (Placa_Car, CNPJ_Locad, Marca_Car, Modelo_Car, Preco_Diaria, Disponibilidade_Car, Categoria_Car)
+VALUES ('JKL0M12', '56236328000156', 'BMW', 'X6', 170.00, 'Disponível', 'SUV');
+
+INSERT INTO Carro (Placa_Car, CNPJ_Locad, Marca_Car, Modelo_Car, Preco_Diaria, Disponibilidade_Car, Categoria_Car)
+VALUES ('STU9V01', '13555654000154', 'Volvo', 'Xc-40', 85.00, 'Disponível', 'SUV');
+
+
+--Inserção dos dados da tabela Cliente--
+INSERT INTO Cliente (CPF_Cli, ID_Func, Nome_Cli, DataNasci_Cli, NumCNH_Cli, Tel_Cli)
+VALUES ('32874519283', 1, 'Novak Djokovic', '2000-04-20', '78234956103', '(11) 987654321');
+
+INSERT INTO Cliente (CPF_Cli, ID_Func, Nome_Cli, DataNasci_Cli, NumCNH_Cli, Tel_Cli)
+VALUES ('87624135967', 2, 'Andrey Rublev', '1999-02-14', '59382714069', '(21) 998765432');
+
+INSERT INTO Cliente (CPF_Cli, ID_Func, Nome_Cli, DataNasci_Cli, NumCNH_Cli, Tel_Cli)
+VALUES ('59168420314', 3, 'Aryna Sabalenka', '1970-01-10', '47503916284', '(31) 912345678');
+
+INSERT INTO Cliente (CPF_Cli, ID_Func, Nome_Cli, DataNasci_Cli, NumCNH_Cli, Tel_Cli)
+VALUES ('20678453192', 4, 'Coco Gauff', '2005-03-06', '26485097132', '(41) 934567890');
+
+INSERT INTO Cliente (CPF_Cli, ID_Func, Nome_Cli, DataNasci_Cli, NumCNH_Cli, Tel_Cli)
+VALUES ('20678453195', 5, 'Jonathan Calleri', '2003-09-11', '91837465021', '(51) 945678901');
+
+INSERT INTO Cliente (CPF_Cli, ID_Func, Nome_Cli, DataNasci_Cli, NumCNH_Cli, Tel_Cli)
+VALUES ('74351289604', 6, 'Pablo Maia', '2005-07-19', '63528047915', '(62) 923456789');
+
+INSERT INTO Cliente (CPF_Cli, ID_Func, Nome_Cli, DataNasci_Cli, NumCNH_Cli, Tel_Cli)
+VALUES ('95845631078', 7, 'Lucas Ferreira', '2008-08-23', '20483975610', '(71) 952134210');
+
+INSERT INTO Cliente (CPF_Cli, ID_Func, Nome_Cli, DataNasci_Cli, NumCNH_Cli, Tel_Cli)
+VALUES ('31057268459', 8, 'Cristiano Ronaldo', '1870-01-11', '87416250397', '(75) 987543210');
+
+INSERT INTO Cliente (CPF_Cli, ID_Func, Nome_Cli, DataNasci_Cli, NumCNH_Cli, Tel_Cli)
+VALUES ('68294751380', 9, 'Rafael Nadal', '1971-02-15', '39172658048', '(91) 985621347');
+
+INSERT INTO Cliente (CPF_Cli, ID_Func, Nome_Cli, DataNasci_Cli, NumCNH_Cli, Tel_Cli)
+VALUES ('45391820765', 10, 'João Fonseca', '2006-04-07', '50648321507', '(11) 967842155');
+
+
+--Inserção dos dados da tabela Cli_Aluguel--
+INSERT INTO Cli_Aluguel (CPF_Cli, Placa_Car, Periodo_Aluguel)
+VALUES ('32874519283', 'ABC1D23', '2 dias');
+
+INSERT INTO Cli_Aluguel (CPF_Cli, Placa_Car, Periodo_Aluguel)
+VALUES ('87624135967', 'DEF4G56', '3 dias');
+
+INSERT INTO Cli_Aluguel (CPF_Cli, Placa_Car, Periodo_Aluguel)
+VALUES ('59168420314', 'GH17H89', '1 dia');
+
+INSERT INTO Cli_Aluguel (CPF_Cli, Placa_Car, Periodo_Aluguel)
+VALUES ('20678453192', 'MNO3P45', '1 dia');
+
+INSERT INTO Cli_Aluguel (CPF_Cli, Placa_Car, Periodo_Aluguel)
+VALUES ('20678453195', 'PQR6S78', '1 dia');
+
+INSERT INTO Cli_Aluguel (CPF_Cli, Placa_Car, Periodo_Aluguel)
+VALUES ('74351289604', 'VWX2Y34', '1 dia');
+
+INSERT INTO Cli_Aluguel (CPF_Cli, Placa_Car, Periodo_Aluguel)
+VALUES ('95845631078', 'YZA5B67', '7 dias');
+
+INSERT INTO Cli_Aluguel (CPF_Cli, Placa_Car, Periodo_Aluguel)
+VALUES ('31057268459', 'BCDBE90', '3 dias');
+
+INSERT INTO Cli_Aluguel (CPF_Cli, Placa_Car, Periodo_Aluguel)
+VALUES ('68294751380', 'JKL0M12', '4 dias');
+
+INSERT INTO Cli_Aluguel (CPF_Cli, Placa_Car, Periodo_Aluguel)
+VALUES ('45391820765', 'STU9V01', '2 dias');
+
+--3.1--
+SELECT COUNT(*) 
+FROM Carro
+WHERE Marca_Car = 'Volvo';
+
+--3.2--
+SELECT 
+    Carro.Marca_Car,
+    COUNT(*) AS Total_Alugueis
+FROM Cli_Aluguel
+INNER JOIN Carro ON Cli_Aluguel.Placa_Car = Carro.Placa_Car
+GROUP BY Carro.Marca_Car;
+
+--3.3--
+SELECT 
+    Carro.Placa_Car,
+    Carro.Marca_Car,
+    Cli_Aluguel.CPF_Cli
+FROM Carro
+LEFT JOIN Cli_Aluguel ON Carro.Placa_Car = Cli_Aluguel.Placa_Car;
+
+--3.4--
+SELECT 
+    Cliente.Nome_Cli,
+    Carro.Modelo_Car,
+    Locadora.Nome_locad
+FROM Cliente
+INNER JOIN Cli_Aluguel ON Cliente.CPF_Cli = Cli_Aluguel.CPF_Cli
+INNER JOIN Carro ON Cli_Aluguel.Placa_Car = Carro.Placa_Car
+INNER JOIN Locadora ON Carro.CNPJ_Locad = Locadora.CNPJ_Locad;
