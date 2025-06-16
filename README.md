@@ -62,8 +62,8 @@ A database modeling project was developed for a fictional car rental company cal
 
 ## 📌 GoRent - Informações importantes sobre a aplicação / GoRent - Important Information about the Application 📌
 
-<p>Este foi um projeto desenvolvido em dupla no ano de 2025, durante o quinto semestre do curso de Bacharelado em Sistemas de Informação na Universidade Presbiteriana Mackenzie, como parte da disciplina de Banco de Dados, ministrada pela professora Andreia Cristina dos Santos Gusmão. <strong>[pt_br]</strong></p>
-<p>This was a project developed in pairs in 2025, during the fifth semester of the Bachelor's degree in Information Systems at Mackenzie Presbyterian University, as part of the Database Systems course taught by Professor Andreia Cristina dos Santos Gusmão. <strong>[en]</strong></p>
+<p>Este foi um projeto desenvolvido em dupla no ano de 2025, durante o quarto semestre do curso de Bacharelado em Sistemas de Informação na Universidade Presbiteriana Mackenzie, como parte da disciplina de Banco de Dados, ministrada pela professora Andreia Cristina dos Santos Gusmão. <strong>[pt_br]</strong></p>
+<p>This was a project developed in pairs in 2025, during the fourth semester of the Bachelor's degree in Information Systems at Mackenzie Presbyterian University, as part of the Database Systems course taught by Professor Andreia Cristina dos Santos Gusmão. <strong>[en]</strong></p>
 
 <h2> Entre em Contato / Get in touch 📬 </h2>
 <p>Se você tiver alguma dúvida ou sugestão sobre este projeto, sinta-se à vontade para entrar em contato pelo email <a href="mailto:beatriz_de_camargo@hotmail.com">beatriz_de_camargo@hotmail.com</a>. <strong> [pt_br] </strong></p>
